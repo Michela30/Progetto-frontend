@@ -117,6 +117,39 @@
                     </div>
                 </div>
             </div>
+
+            <div class="faculty-description">
+
+                <div class="row justify-content-center">
+                    <div class="col-5">
+
+                        <div class="faculty-img">
+                            <img src="../assets/img/Gavel-Illustration-e1556884768193.png" alt="">
+                        </div>
+
+                    </div>
+
+                    <div class="col-7">
+                        <h2>
+                            Law Faculty
+                        </h2>
+
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam repellendus nesciunt nulla possimus ex quis aliquam pariatur vitae repellat esse itaque cum soluta perspiciatis inventore, deleniti aut. Non recusandae debitis quae quo natus ratione vero.
+                        </p>
+
+                        <button>
+                            butt comp coral
+                        </button>
+
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="wave-botton">
+                <img src="../assets/svg/svg-0.svg" alt="">
+            </div>
         </section>
     </main>
 
@@ -199,6 +232,28 @@
         strong{
             color: $color-coral-primary;
             font-size: 0.8em;
+        }
+    }
+
+    .faculty-description{
+        padding: 80px 0 30px;
+        max-width: 900px;
+        .faculty-img{
+            padding: 10px;
+            width: 300px;
+
+            img{
+                width: 100%;
+            }
+        }
+
+        .col-7 {
+            h2,p{
+                padding: 10px;
+            }
+            button{
+                margin-left: 10px;
+            }
         }
     }
 }
