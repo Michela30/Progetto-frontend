@@ -40,8 +40,9 @@
                 title: 'Purchase',
                 link: '',
                 hasDropdown: false
-            },
-        ]
+            }            
+        ],
+        
       }
     },
     methods: {
@@ -95,7 +96,34 @@
        </div>
 
        <div class="header-bottom">
+            <div class="my-small-container text-center">
+                
+                <div class="jumbotron-text">
+                    <h1>
+                        Key to your success
+                    </h1>
+    
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus autem fuga mollitia ullam consequuntur.
+                    </p>
+    
+                    <div class="d-flex justify-content-center">
+                        <button>
+                            button comp giallo
+                        </button>
+    
+                        <button>
+                            button comp white
+                        </button>
+                        
+                    </div>
+                </div>
+                
+            </div>
 
+            <div>
+                button in absolute
+            </div>
        </div>
     </header>
 
@@ -106,8 +134,32 @@
 <style lang="scss" scoped>
 @use '../assets/scss/variables.scss' as *;
 
+header{
+    color: white;
+    height: 600px;
+    background-image: url(../assets/img/theme_slider2_bg-1.jpg);
+    background-position-y: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    .header-top, .header-bottom{
+        background-color: rgba(222,111,112,0.9);
+
+    }
+    .header-bottom{
+        height: 500px;
+
+        .jumbotron-text {
+            padding-top: 100px;
+
+            >* {
+                padding: 15px 0;
+            } 
+        }
+    }
+}
 .header-top {
-    padding: 20px 40px;
+    padding: 40px 40px 5px;
 
     nav {
         .dropdown {
@@ -117,7 +169,7 @@
                 padding: 0 10px;
                 list-style-type: none;
                 a {
-                    color: black;
+                    color: white;
                     text-decoration: none;
                 }
             }
