@@ -146,7 +146,7 @@
 
         </div>
         
-        <div class="wave-botton">
+        <div class="wave-bottom">
             <img src="../assets/svg/svg-0.svg" alt="">
         </div>
     </section>

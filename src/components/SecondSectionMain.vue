@@ -5,7 +5,23 @@
     data() {
       return{
         //dati
-        
+        events: [
+            {
+                title: 'Coaching Session',
+                time: '20 May 21.30 PM',
+                text: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga nam, fugiat aut quidem laboriosam mollitia.'
+            },
+            {
+                title: 'Coaching Session',
+                time: '24 Mar 18:00 PM',
+                text: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga nam, fugiat aut quidem laboriosam mollitia.'
+            },
+            {
+                title: 'Coaching Session',
+                time: '12 Feb 13.30 PM',
+                text: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga nam, fugiat aut quidem laboriosam mollitia.'
+            }
+        ]
       }
     },
     methods: {
@@ -103,33 +119,38 @@
                 </h2>
 
                 <div class="row justify-content-center">
-                    <div class="my_card">
+                    <div class="my_card" v-for="(singleCard, i) in events" :key="i">
                         <h5>
-                            Coaching Session
+                            {{ singleCard.title }}
                         </h5>
 
-                        <span>
-                            icon
-                        </span>
+                        <i class="fa-regular fa-calendar-days fa-xs"></i>
 
-                        <span>
-                            ora
+                        <span class="time">
+                            {{ singleCard.time }}
                         </span>
 
                         <p>
-                           Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga nam, fugiat aut quidem laboriosam mollitia.
+                            {{ singleCard.text }}
                         </p>
+
+                        <button>
+                            + find more
+                        </button>
                     </div>
-                    <div class="my_card">
-                        1
-                    </div>
-                    <div class="my_card">
-                        1
-                    </div>
+                    
                 </div>
+
+                <button class="mt-5">
+                    view all events
+                </button>
             </div>
         </div>
 
+        <div class="wave-bottom">
+            <img src="../assets/svg/svg-1.svg" alt="">
+        </div>
+        
    </section>
    
 </template>
@@ -223,7 +244,17 @@
             p{
                 font-size: 0.7em;
             }
-        
+            
+            .time{
+                font-size: 0.6em;
+                padding-left: 5px;
+            }
+        }
+    }
+
+    .wave-bottom{
+        img{
+            width: 100%;
         }
     }
 }
