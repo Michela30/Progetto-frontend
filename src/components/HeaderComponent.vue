@@ -96,6 +96,10 @@
        </div>
 
        <div class="header-bottom">
+        
+       <div class="wave">
+            <img src="../assets/img/Wave-1.png" alt="">
+       </div>
             <div class="my-small-container text-center">
                 
                 <div class="jumbotron-text">
@@ -125,6 +129,7 @@
                 button in absolute
             </div>
        </div>
+
     </header>
 
 </template>
@@ -136,7 +141,7 @@
 
 header{
     color: white;
-    height: 600px;
+    height: 590px;
     background-image: url(../assets/img/theme_slider2_bg-1.jpg);
     background-position-y: top;
     background-size: cover;
@@ -147,7 +152,8 @@ header{
 
     }
     .header-bottom{
-        height: 500px;
+        height: 510px;
+        position: relative;
 
         .jumbotron-text {
             padding-top: 100px;
@@ -157,6 +163,7 @@ header{
             } 
         }
     }
+
 }
 .header-top {
     padding: 40px 40px 5px;
@@ -171,12 +178,28 @@ header{
                 a {
                     color: white;
                     text-decoration: none;
+
+                }
+
+                a:hover{
+                    color: $color-yellow;
                 }
             }
         }
     }
     button {
         margin-left: 5px;
+    }
+}
+
+.wave{
+    width: 100%;
+
+    img{
+        width: 100%;
+        position: absolute;
+        bottom: 0px;
+        object-fit: cover;
     }
 }
 </style>
