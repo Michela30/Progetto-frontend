@@ -243,7 +243,7 @@
             transform: rotate(315deg);
             position: absolute;
             bottom: -5px;
-            left: 50%;
+            left: 72px;
         }
 
         strong{

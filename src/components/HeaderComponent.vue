@@ -1,5 +1,6 @@
 <script>
 //import
+import myButton from './myButton.vue';
 
    export default {
     data() {
@@ -95,6 +96,15 @@
             }            
         ],
         
+        buttonData: [
+            {
+                title: 'VIEW COURSES',
+                color: 'button-yellow',
+                icon: null,
+                colorHoverWhite: ':hover'
+
+            }
+        ]
       }
     },
     methods: {
@@ -102,6 +112,7 @@
     },
     components: {
         //dichiarazione
+        myButton,
     },
     props:{
         //utilizzo per file padre
@@ -119,7 +130,11 @@
 
             <div class="d-flex">
                 <div class="col-4">
-                    logo
+                   
+                    <div class="logo-box">
+                        <img src="../assets/img/theme_eduprime_logo.png" alt="">
+                    </div>
+
                 </div>
 
                 <nav class="col-8">
@@ -143,9 +158,11 @@
                                     
                         </li>
 
-                        <button>
-                            button component
-                        </button>
+                        <myButton
+                        v-for="singleButton in buttonData"
+                        :title="singleButton.title"
+                        :color="singleButton.color"
+                        :colorHover="singleButton.colorHoverWhite"/>
                     </ul>
                 </nav>
             </div>
@@ -182,8 +199,18 @@
                 
             </div>
 
-            <div>
-                button in absolute
+            <div class="icon--header-left">
+               <div class="d-flex flex-column">
+                    <a href="#" class="text-white">
+                        <i class="fa-xs fa-solid fa-cart-shopping"></i>
+                    </a>
+                    <a href="#" class="text-white">
+                        <i class="fa-xs fa-regular fa-map"></i>
+                    </a>
+                    <a href="#" class="text-white">
+                        <i class="fa-xs fa-solid fa-life-ring"></i>
+                    </a>
+               </div>
             </div>
        </div>
 
@@ -225,6 +252,16 @@ header{
 .header-top {
     padding: 40px 40px 5px;
 
+    .logo-box{
+        padding-bottom: 30px;
+        width: 180px;
+        height: 40px;
+
+        img{
+            width: 100%;
+        }
+    }
+
     nav {
         .dropdown {
            
@@ -245,6 +282,9 @@ header{
         }
     }
 
+    .logo-box,nav{
+        line-height: 40px;
+    }
     .my_dropdown{
         li{
             a{
@@ -256,7 +296,13 @@ header{
         margin-left: 5px;
     }
 }
-
+.icon--header-left{
+    background-color: $color-yellow;
+    width: 25px;
+    position: absolute;
+    top: 150px;
+    box-shadow: 19px 4px 40px -10px #000000;
+}
 .wave{
     width: 100%;
 
@@ -267,4 +313,15 @@ header{
         object-fit: cover;
     }
 }
+
+.button-yellow{
+    background-color: $color-yellow;
+    color: white;
+}
+
+// .hovercolor-white{
+//     background-color: white;
+//     color: $color-coral-primary;;
+// }
+
 </style>

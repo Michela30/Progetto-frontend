@@ -92,6 +92,37 @@
                 title: 'My account',
                 link: ''
             },
+        ],
+
+        linkFooterRight: [
+            {
+                title: 'economy',
+                link: ''
+            },
+            {
+                title: 'design',
+                link: ''
+            },
+            {
+                title: 'coaching',
+                link: ''
+            },
+            {
+                title: 'business',
+                link: ''
+            },
+            {
+                title: 'medicine',
+                link: ''
+            },
+            {
+                title: 'law',
+                link: ''
+            },
+            {
+                title: 'fitness',
+                link: ''
+            }
         ]
       }
     },
@@ -153,22 +184,26 @@
                     <!-- footer logo/icon -->
                     <div class="col col-left">
                         <div class="logo-box">
-                            img logo
+                            <img src="../assets/img/theme_eduprime_logo.png" alt="">
                         </div>
 
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. A, doloribus cumque? Sunt, dolor numquam!
                         </p>
 
-                        <span>
-                            icon
-                        </span>
-                        <span>
-                            icon
-                        </span>
-                        <span>
-                            icon
-                        </span>
+                        <div class="social">
+
+                            <a href="#">
+                                <i class="fa-xs fa-brands fa-facebook-f"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fa-xs fa-brands fa-twitter"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fa-xs fa-brands fa-instagram"></i>
+                            </a>
+
+                        </div>
                     </div>
 
                     <!-- footer link -->
@@ -219,40 +254,23 @@
                         </form>
 
                         <div class="col-right-text">
-                            <strong class="title">
-                                Search categories
-                            </strong>
+                            <div>
+                                <strong class="title">
+                                    Search categories
+                                </strong>
+                            </div>
 
-                            <div class="categories">
+                            <div class="categories" v-for="singleLinkFooter in linkFooterRight">
                                 <a href="#">
-                                    link
-                                </a>
-                                <a href="#">
-                                    link
-                                </a>
-                                <a href="#">
-                                    link
-                                </a>
-                                <a href="#">
-                                    link
+                                    {{singleLinkFooter.title}}
                                 </a>
                             </div>
 
-                            <div class="categories">
-                                <a href="#">
-                                    link
-                                </a>
-                                <a href="#">
-                                    link
-                                </a>
-                                <a href="#">
-                                    link
+                            <div>
+                                <a href="#" id="copyright">
+                                    ModelTheme@poweredbyMichela
                                 </a>
                             </div>
-
-                            <a href="#" id="copyright">
-                                copyright
-                            </a>
                         </div>
 
                     </div>
@@ -330,9 +348,9 @@
 
     .col-left{
         .logo-box{
-            //width: 180px;
+            width: 180px;
             height: 50px;
-            background-color: beige;
+            margin-left: 0;
              
             img{
                 width: 100%;
@@ -344,6 +362,24 @@
                 padding-left: 0;
                 font-size: 0.8em;
             }
+
+        .social{
+            >*{
+                margin-right: 10px;
+            }
+            a{
+                color: white;
+
+                i{
+                    line-height: 17px;
+                    height: 30px;
+                    width: 30px;
+                    border-radius: 50%;
+                    border: 1px solid $color-yellow;
+                    padding: 5px 10px;
+                }
+            }
+        }
     }
 
     .col-middle{
@@ -408,6 +444,7 @@
             .categories{
                 font-size: 0.7em;
                 text-transform: uppercase;
+                display: inline-block;
 
                 >*{
                     text-decoration: none;
@@ -419,6 +456,10 @@
                     border-radius: 20px;
                     padding: 0 10px;
                 }
+            }
+
+            .categories a:hover{
+                background-color: $color-yellow;
             }
 
             #copyright{
