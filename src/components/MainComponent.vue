@@ -3,7 +3,7 @@
 import FirstSectionMain from './FirstSectionMain.vue'
 import SecondSectionMain from './SecondSectionMain.vue'
 import ThirdSectionMain from './ThirdSectionMain.vue'
-
+import FourthSectionMain from './FourthSectionMain.vue'
 
 
    export default {
@@ -45,6 +45,7 @@ import ThirdSectionMain from './ThirdSectionMain.vue'
         FirstSectionMain,
         SecondSectionMain,
         ThirdSectionMain,
+        FourthSectionMain,
 
     },
     props:{
@@ -67,10 +68,13 @@ import ThirdSectionMain from './ThirdSectionMain.vue'
     
         <SecondSectionMain />
 
-        <!-- Second section -->
+        <!-- Third section -->
 
         <ThirdSectionMain />
 
+        <!-- Fourth section -->
+
+        <FourthSectionMain />
 
     </main>
 
