@@ -2,6 +2,8 @@
 //import
 import FirstSectionMain from './FirstSectionMain.vue'
 import SecondSectionMain from './SecondSectionMain.vue'
+import ThirdSectionMain from './ThirdSectionMain.vue'
+
 
 
    export default {
@@ -41,7 +43,9 @@ import SecondSectionMain from './SecondSectionMain.vue'
     components: {
         //dichiarazione
         FirstSectionMain,
-        SecondSectionMain
+        SecondSectionMain,
+        ThirdSectionMain,
+
     },
     props:{
         //utilizzo per file padre
@@ -62,6 +66,10 @@ import SecondSectionMain from './SecondSectionMain.vue'
         <!-- Second section -->
     
         <SecondSectionMain />
+
+        <!-- Second section -->
+
+        <ThirdSectionMain />
 
 
     </main>

@@ -9,12 +9,46 @@
             {
                 title: 'Home',
                 link: '',
-                hasDropdown: true
+                hasDropdown: true,
+
+                linkDropdown: [
+                    {
+                        title: 'Courses',
+                        link: ''
+                    },
+                    {
+                        title: 'Events',
+                        link: ''
+                    }
+                ]
+
             },
             {
                 title: 'Courses',
                 link: '',
-                hasDropdown: true
+                hasDropdown: true,
+                linkDropdown: [
+                    {
+                        title: 'Law Faculty',
+                        link: ''
+                    },
+                    {
+                        title: 'Economy',
+                        link: ''
+                    },
+                    {
+                        title: 'Medicine',
+                        link: ''
+                    },
+                    {
+                        title: 'Computer Science',
+                        link: ''
+                    },
+                    {
+                        title: 'Grapich Design',
+                        link: ''
+                    }
+                ]
             },
             {
                 title: 'About Us',
@@ -24,12 +58,30 @@
             {
                 title: 'News',
                 link: '',
-                hasDropdown: true
+                hasDropdown: true,
+
+                linkDropdown: [
+                    {
+                        title: 'Blog',
+                        link: ''
+                    },
+                ]
             },
             {
                 title: 'Pages',
                 link: '',
-                hasDropdown: true
+                hasDropdown: true,
+
+                linkDropdown: [
+                    {
+                        title: 'Courses',
+                        link: ''
+                    },
+                    {
+                        title: 'Events',
+                        link: ''
+                    }
+                ]
             },
             {
                 title: 'Contact',
@@ -74,16 +126,21 @@
                     <ul class="dropdown">
 
                         <li class="link-nav" v-for="(singleLink, i) in navBarLink" :key="i">
-                            <a href="#" :class="{'dropdown-toggle' : singleLink.hasDropdown == true}" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a id="navbar-a" href="#" :class="{'dropdown-toggle' : singleLink.hasDropdown == true}" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 {{singleLink.title}}
                             </a>
-                                    
+
+                            
                             <ul :class="{'dropdown-menu': singleLink.hasDropdown == true,
                                         'd-none': singleLink.hasDropdown == false,}">
-                                <li><a :class="{'dropdown-item' : singleLink.hasDropdown == true}" href="#">Action</a></li>
-                                <li><a :class="{'dropdown-item' : singleLink.hasDropdown == true}" href="#">Another action</a></li>
-                                <li><a :class="{'dropdown-item' : singleLink.hasDropdown == true}" href="#">Something else here</a></li>
+
+                                <li v-for="(singleLinkDropdown, index) in navBarLink[i].linkDropdown" :key="index">
+                                    <a :class="{'dropdown-item' : singleLink.hasDropdown == true}" href="#">
+                                        {{singleLinkDropdown.title}}
+                                    </a>
+                                </li>
                             </ul>
+                                    
                         </li>
 
                         <button>
@@ -175,15 +232,23 @@ header{
                 display: inline-block;
                 padding: 0 10px;
                 list-style-type: none;
-                a {
+                #navbar-a {
                     color: white;
                     text-decoration: none;
 
                 }
-
-                a:hover{
+                #navbar-a:hover{
                     color: $color-yellow;
                 }
+
+            }
+        }
+    }
+
+    .my_dropdown{
+        li{
+            a{
+                color: black;
             }
         }
     }
