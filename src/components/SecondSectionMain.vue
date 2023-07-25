@@ -147,9 +147,6 @@
             </div>
         </div>
 
-        <!-- <div class="wave-bottom">
-            <img src="../assets/svg/svg-1.svg" alt="">
-        </div> -->
         
    </section>
    
@@ -163,7 +160,6 @@
 
 .second-section{
     background-color: $color-coral-primary;
-    padding-bottom: 0;
 
     .icon-section{
         width: 50px;
@@ -254,10 +250,5 @@
     }
 }
 
-.second-section::after{
-    background-image: url(../assets/svg/svg-1.svg);
-    width: 100%;
-    height: 400px;
-    content: '.';
-}
+
 </style>

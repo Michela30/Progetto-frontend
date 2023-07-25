@@ -53,8 +53,12 @@
 
 
 <template>
+    
+    <section class="third-section">
 
-   <section class="third-section">
+       <div class="wave-bottom ms-0">
+            <img class="sfondo" src="../assets/svg/svg-1.svg" alt="">
+        </div>
 
     <!-- first part: courses -->
 
@@ -171,7 +175,7 @@
 
 .third-section{
     background-color: white;
-    padding: 40px 0;
+    padding: 0 0 40px;
 
     .col{
         padding: 5px 10px;
@@ -248,6 +252,11 @@
         }
     }
 
+    .wave-bottom{
+        img{
+            width: 100%;
+        }
+    }
    
 }
 </style>

@@ -51,12 +51,14 @@
 
     <!-- first section -->
     <section class="first-section">
-        <div class="my_container">
-            
-            <div class="row">
-                <div class="col-8">
 
-                    <div>
+        <div class="sfondo-dx">
+
+            <div class="my_container">
+                
+                <div class="row">
+                    <div class="col-8">
+                        
                         <div class="icon-section">
                             <img src="../assets/img/Books-icon.png" alt="">
                         </div>
@@ -66,22 +68,24 @@
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem similique nulla praesentium debitis velit cumque doloremque culpa eligendi ipsam, asperiores nesciunt! Natus, debitis? Maiores quod cumque voluptates dolorum 
                         </p>
-                        <button>
+                        <button class="ms-5">
                             comp yellow button
                         </button>
+                        
                     </div>
-                </div>
-
-                <div class="col-4">
-                    <div class="image-box">
-                        <img src="../assets/img/Graduation-Illustration.png" alt="">
+    
+                    <div class="col-4">
+                        <div class="image-box">
+                            <img src="../assets/img/Graduation-Illustration.png" alt="">
+                        </div>
+    
+                        <!-- <div class="sfondo">
+    
+                        </div> -->
                     </div>
-
-                    <!-- <div class="sfondo">
-
-                    </div> -->
                 </div>
             </div>
+
         </div>
 
 
@@ -165,32 +169,20 @@
     .icon-section{
         width: 50px;
         height: 50px;
-        margin: 0;
+        margin-left: 70px;
         
         img{
             width: 100%;
         }
     }
 
-    .col-8 > *{
-        padding: 15px 70px;
-    }
+    .col-8{
 
-    // .col-4 {
-    //     position: relative;
-    //     .sfondo {
-    //         background-image: url(../assets/img/home-background.png);
-    //         color: grey;
-    //         background-position: right;
-    //         background-repeat: no-repeat;
-    //         background-size: cover;
-    //         width: 300px;
-    //         height: 400px;
-    //         position: absolute;
-    //         right: 0;
-    //         top: 0;
-    //     }
-    // }
+        height: auto;
+        h2, p{
+           padding: 15px 70px;
+       }
+    }
 
     .image-box{
         padding-right: 50px;
@@ -204,7 +196,7 @@
     }
 
     .my-small-container{
-        margin-top: 100px;
+        margin-top: 20px;
 
         p{
             padding: 10px 150px;
@@ -255,5 +247,18 @@
             }
         }
     }
+
+    .wave-bottom{
+        img{
+            width: 100%;
+        }
+    }
 }
+
+.sfondo-dx{
+        background-image: url(../assets/img/home-background.png);
+        background-size: cover;
+        height: 420px;
+        color: grey;
+    }
 </style>

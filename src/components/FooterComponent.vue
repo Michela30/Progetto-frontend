@@ -200,8 +200,55 @@
                     </div>
 
                     <!-- footer search -->
-                    <div class="col">
-                        col 3
+                    <div class="col col-right">
+                        
+                        <form action="">
+                            <div class="input-group">
+                                <input type="text" class="form-control rounded-pill" placeholder="Search..." aria-label="Search" aria-describedby="button-addon2" required>
+
+                                <button class="btn rounded-circle send-button" type="submit" id="button-addon2">
+                                    <i class="fa-xs fa-solid fa-magnifying-glass"></i>
+                                </button>
+                            </div>
+                        </form>
+
+                        <div class="col-right-text">
+                            <strong class="title">
+                                Search categories
+                            </strong>
+
+                            <div class="categories">
+                                <a href="#">
+                                    link
+                                </a>
+                                <a href="#">
+                                    link
+                                </a>
+                                <a href="#">
+                                    link
+                                </a>
+                                <a href="#">
+                                    link
+                                </a>
+                            </div>
+
+                            <div class="categories">
+                                <a href="#">
+                                    link
+                                </a>
+                                <a href="#">
+                                    link
+                                </a>
+                                <a href="#">
+                                    link
+                                </a>
+                            </div>
+
+                            <a href="#" id="copyright">
+                                copyright
+                            </a>
+                        </div>
+
                     </div>
                 </div>
 
@@ -297,6 +344,65 @@
                         font-size: 0.6em;
                     }
                 }
+            }
+        }
+    }
+
+    .col-right{
+        form{
+        margin-left: 35px;
+
+        input{
+            width: 200px;
+            height: 40px;
+            font-size: 0.6em;
+            position: relative;
+        }
+
+        .send-button{
+            background-color: $color-yellow;
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            position: absolute;
+            right: -10px;
+            color: white;
+            box-shadow: -20px -1px 31px -11px #F7F8FA;
+            }
+        }
+
+        .col-right-text{
+            text-align: right;
+            margin-top: 15px;
+
+            >*{
+                padding: 5px 0;
+            }
+
+            .title{
+                font-size: 0.8em;
+            }
+            
+            .categories{
+                font-size: 0.7em;
+                text-transform: uppercase;
+
+                >*{
+                    text-decoration: none;
+                    color: white;
+                    margin-left: 15px;
+                    border: 1px solid white;
+                    height: 20px;
+                    width: 40px;
+                    border-radius: 20px;
+                    padding: 0 10px;
+                }
+            }
+
+            #copyright{
+                text-decoration: none;
+                font-size: 0.6em;
+                color: $color-yellow;
             }
         }
     }
