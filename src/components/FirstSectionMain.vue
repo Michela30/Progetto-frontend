@@ -113,6 +113,9 @@
                     <strong>
                         {{iconFaculties.title}}
                     </strong>
+                    <div class="triangle">
+                        
+                    </div>
                 </div>
                 
                 <div class="col">
@@ -209,6 +212,7 @@
         text-align: center;
         height: 150px;
         box-shadow: 0 10px 10px #F7F8FA;
+        position: relative;
 
         .iconFaculties-box{
             padding: 25px 0 10px;
@@ -223,6 +227,30 @@
         strong{
             color: $color-coral-primary;
             font-size: 0.8em;
+        }
+
+    }
+    .col:hover{
+        background-color: $color-coral-primary;
+        color: white;
+        
+        .triangle{
+            width: 10px;
+            height: 10px;
+            border-left: 1px solid $color-coral-primary;
+            border-bottom: 1px solid $color-coral-primary;
+            background-color: $color-coral-primary;
+            transform: rotate(315deg);
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+        }
+
+        strong{
+            color: white;
+        }
+        .iconFaculties-box{
+            filter: brightness(250%);
         }
     }
 
@@ -256,9 +284,9 @@
 }
 
 .sfondo-dx{
-        background-image: url(../assets/img/home-background.png);
-        background-size: cover;
-        height: 420px;
-        color: grey;
-    }
+    background-image: url(../assets/img/home-background.png);
+    background-size: cover;
+    height: 420px;
+    color: grey;
+}
 </style>

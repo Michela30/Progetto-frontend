@@ -115,27 +115,33 @@
 <template>
     <footer>
         <section class="footer-top">
-           <div class="text-center">
+            <div class="text-center">
                 <h2>
                     Partners
                 </h2>
-
+                
                 <p>
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non qui nesciunt eum voluptate? Corporis, in nulla!
                 </p>
-           </div>
-
-           <div class="my_partner-row">
-
+            </div>
+            
+            <div class="my_partner-row">
+                
                 <div class="partner-box" v-for="(singlePartner, i) in partners" :key="i">
-
+                    
                     <div class="img-box">
                         <img :src="getImagePath(`../assets/img/${singlePartner.image}`)" alt="">
                     </div>
-
+                    
+                    
                 </div>
                 
-           </div>
+            </div>
+            <div class="sfondo">
+                <div class="bg">
+
+                </div>
+            </div>
         </section>
 
         
@@ -265,7 +271,7 @@
 
 .footer-top{
     background-color: white;
-    padding: 40px 0;
+    padding: 40px 0 0;
 
     >* {
         padding: 10px 0;
@@ -297,6 +303,22 @@
             .img-box:hover{
                 opacity: 1;
             }
+        }
+    }
+
+    .sfondo{
+    
+        background-image: url(../assets/img/background-wave3.png);
+        height: 200px;
+        width: 100%;
+        background-position: top right;
+        filter: invert(0.1);
+        transform: rotate(180deg);
+        
+        .bg{
+            width: 100%;
+            height: 100%;
+            object-fit: scale-down;
         }
     }
 }
