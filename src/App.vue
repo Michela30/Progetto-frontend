@@ -10,6 +10,9 @@ import FooterComponent from './components/FooterComponent.vue';
 
       }
     },
+    methods: {
+    
+    },
     components: {
       HeaderComponent,
       MainComponent,
