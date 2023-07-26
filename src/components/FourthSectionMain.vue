@@ -37,7 +37,7 @@
 
             <form action="">
                 <div class="input-group">
-                    <input type="email" class="form-control rounded-pill" placeholder="Email address..." aria-label="Email address" aria-describedby="button-addon2" required>
+                    <input type="email" class="rounded-pill border border-none ps-2" placeholder="Email address..." aria-label="Email address" aria-describedby="button-addon2" required>
 
                     <button class="btn rounded-circle send-button" type="submit" id="button-addon2">
                         <i class="fa-xs fa-solid fa-paper-plane"></i>

@@ -6,6 +6,7 @@ import myButton from './myButton.vue';
     data() {
       return{
         //dati
+        count: 0,
         faculties: [
             {
                 image: 'Gavel-v2.png',
@@ -28,6 +29,34 @@ import myButton from './myButton.vue';
                 title: 'Graphic Design'
             }
         ],
+        facultiesDescription: [
+            {
+                image: 'Gavel-Illustration-e1556884768193.png',
+                title: 'Law Faculty',
+                text: '   Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium deserunt voluptatibus obcaecati harum voluptatum. Ipsam nisi molestiae ab impedit, suscipit libero dolor totam optio pariatur aut, quibusdam assumenda atque tempore natus porro unde illum laborum quisquam dignissimos deserunt. Quisquam, maiores!'
+            },
+            {
+                image: 'Economy.png',
+                title: 'Economy',
+                text: '   Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium deserunt voluptatibus obcaecati harum voluptatum. Ipsam nisi molestiae ab impedit, suscipit libero dolor totam optio pariatur aut, quibusdam assumenda atque tempore natus porro unde illum laborum quisquam dignissimos deserunt. Quisquam, maiores!'
+            },
+            {
+                image: 'Medicine.png',
+                title: 'Medicine',
+                text: '   Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium deserunt voluptatibus obcaecati harum voluptatum. Ipsam nisi molestiae ab impedit, suscipit libero dolor totam optio pariatur aut, quibusdam assumenda atque tempore natus porro unde illum laborum quisquam dignissimos deserunt. Quisquam, maiores!'
+            },
+            {
+                image: 'Computer-Science.png',
+                title: 'Computer Science',
+                text: '   Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium deserunt voluptatibus obcaecati harum voluptatum. Ipsam nisi molestiae ab impedit, suscipit libero dolor totam optio pariatur aut, quibusdam assumenda atque tempore natus porro unde illum laborum quisquam dignissimos deserunt. Quisquam, maiores!'
+            },
+            {
+                image: 'Graphic-Design.png',
+                title: 'Graphic Design',
+                text: '   Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium deserunt voluptatibus obcaecati harum voluptatum. Ipsam nisi molestiae ab impedit, suscipit libero dolor totam optio pariatur aut, quibusdam assumenda atque tempore natus porro unde illum laborum quisquam dignissimos deserunt. Quisquam, maiores!'
+            }
+        ],
+
         buttonFour: {
             title: 'Browse through courses',
             color: 'button-yellow',
@@ -44,7 +73,11 @@ import myButton from './myButton.vue';
         //function
         getImagePath: function(image){
             return new URL (image, import.meta.url).href;
-        }
+        },
+        nextTab(index){
+
+            this.count = index;
+        },
     },
     components: {
         //dichiarazione
@@ -120,7 +153,7 @@ import myButton from './myButton.vue';
                     
                 </div>
 
-                <div class="col" v-for="iconFaculties in faculties">
+                <div class="col" v-for="(iconFaculties, index) in faculties" :key="index" @click="nextTab(index)">
                     <div class="iconFaculties-box">
                         <img :src="getImagePath(`../assets/img/${iconFaculties.image}`)">
                     </div>
@@ -138,35 +171,34 @@ import myButton from './myButton.vue';
             </div>
         </div>
 
-        <div class="faculty-description">
-
+        <div class="faculty-description" :class="(i == count) ? 'd-block' : 'd-none' " v-for="(singleTab,i) in facultiesDescription" :key="i" tabindex="0">
+            
             <div class="row justify-content-center">
                 <div class="col-5">
 
                     <div class="faculty-img">
-                        <img src="../assets/img/Gavel-Illustration-e1556884768193.png" alt="">
+                        <img :src="getImagePath(`../assets/img/${singleTab.image}`)" alt="">
                     </div>
 
                 </div>
 
                 <div class="col-7">
                     <h2>
-                        Law Faculty
+                        {{singleTab.title}}
                     </h2>
 
                     <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam repellendus nesciunt nulla possimus ex quis aliquam pariatur vitae repellat esse itaque cum soluta perspiciatis inventore, deleniti aut. Non recusandae debitis quae quo natus ratione vero.
+                        {{singleTab.text}}
                     </p>
 
                     <span class="buttonFive">
-                            <myButton
-                            :title="buttonFive.title"
-                            :color="buttonFive.color"/>
-                        </span>
+                        <myButton
+                        :title="buttonFive.title"
+                        :color="buttonFive.color"/>
+                    </span>
 
                 </div>
             </div>
-
         </div>
         
         <div class="wave-bottom">

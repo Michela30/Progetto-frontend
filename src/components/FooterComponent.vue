@@ -245,7 +245,7 @@
                         
                         <form action="">
                             <div class="input-group">
-                                <input type="text" class="form-control rounded-pill" placeholder="Search..." aria-label="Search" aria-describedby="button-addon2" required>
+                                <input type="text" class=" rounded-pill border border-none ps-2 w-100" placeholder="Search..." aria-label="Search" aria-describedby="button-addon2" required>
 
                                 <button class="btn rounded-circle send-button" type="submit" id="button-addon2">
                                     <i class="fa-xs fa-solid fa-magnifying-glass"></i>
@@ -276,6 +276,14 @@
                     </div>
                 </div>
 
+            </div>
+
+            <div class="button-to-top">
+                <button>
+                    <a href="#">
+                        <i class="fa-solid fa-arrow-up"></i>
+                    </a>
+                </button>
             </div>
         </section>
     </footer>
@@ -345,6 +353,7 @@
     padding: 70px 0 50px;
     background-color: $color-coral-primary;
     color: white;
+    position: relative;
 
     .col-left{
         .logo-box{
@@ -411,7 +420,6 @@
         margin-left: 35px;
 
         input{
-            width: 200px;
             height: 40px;
             font-size: 0.6em;
             position: relative;
@@ -466,6 +474,30 @@
                 text-decoration: none;
                 font-size: 0.6em;
                 color: $color-yellow;
+            }
+        }
+    }
+
+    .button-to-top{
+        background-color: $color-yellow;
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        position: fixed;
+        right: 30px;
+        bottom: 20px;
+        
+        button{
+            border: none;
+            background-color: transparent;
+            
+            a{
+                color: white;
+                margin-left: 14px;
+               
+                i{
+                    margin-top: 12px;
+                }
             }
         }
     }
