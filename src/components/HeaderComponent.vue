@@ -14,13 +14,13 @@ import myButton from './myButton.vue';
 
                 linkDropdown: [
                     {
-                        title: 'Courses',
-                        link: '#courses'
-                    },
-                    {
                         title: 'Events',
                         link: '#event'
-                    }
+                    },
+                    {
+                        title: 'Latest Courses',
+                        link: '#courses'
+                    },
                 ]
 
             },
