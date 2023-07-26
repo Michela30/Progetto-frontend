@@ -81,7 +81,7 @@ import myButton from './myButton.vue';
     <!-- first part: courses -->
 
         <div class="my_container px-4">
-            <h2>
+            <h2 id="courses">
                 Latest Courses
             </h2>
 
@@ -281,6 +281,7 @@ import myButton from './myButton.vue';
     .wave-bottom{
         img{
             width: 100%;
+            margin-top: -1px;
         }
     }
    

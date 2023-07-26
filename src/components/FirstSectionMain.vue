@@ -10,22 +10,27 @@ import myButton from './myButton.vue';
         faculties: [
             {
                 image: 'Gavel-v2.png',
+                link: '',
                 title: 'Law Faculty'
             },
             {
                 image: 'Coins-tabs-v2.png',
+                link: '',
                 title: 'Economy'
             },
             {
                 image: 'Medicine-tabs-v2.png',
+                link: '',
                 title: 'Medicine'
             },
             {
                 image: 'Computer-tabs-v2.png',
+                link: '',
                 title: 'Computer Science'
             },
             {
                 image: 'Palette-tabs-v2.png',
+                link: '',
                 title: 'Graphic Design'
             }
         ],
@@ -152,14 +157,16 @@ import myButton from './myButton.vue';
                 <div class="col">
                     
                 </div>
+                    <!-- slider -->
 
-                <div class="col" v-for="(iconFaculties, index) in faculties" :key="index" @click="nextTab(index)">
-                    <div class="iconFaculties-box">
-                        <img :src="getImagePath(`../assets/img/${iconFaculties.image}`)">
-                    </div>
-                    <strong>
-                        {{iconFaculties.title}}
-                    </strong>
+                    <div class="col" v-for="(iconFaculties, index) in faculties" :key="index" @click="nextTab(index)">
+                        <div class="iconFaculties-box">
+                            <img :src="getImagePath(`../assets/img/${iconFaculties.image}`)">
+                        </div>
+                        <strong>
+                            {{iconFaculties.title}}
+                        </strong>
+
                     <div class="triangle">
                         
                     </div>
@@ -291,7 +298,7 @@ import myButton from './myButton.vue';
             transform: rotate(315deg);
             position: absolute;
             bottom: -5px;
-            left: 72px;
+            left: 90px;
         }
 
         strong{
@@ -327,6 +334,7 @@ import myButton from './myButton.vue';
     .wave-bottom{
         img{
             width: 100%;
+            margin-bottom: -1px;
         }
     }
 }

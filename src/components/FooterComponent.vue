@@ -193,13 +193,13 @@
 
                         <div class="social">
 
-                            <a href="#">
+                            <a href="https://www.facebook.com/login/" target="_blank">
                                 <i class="fa-xs fa-brands fa-facebook-f"></i>
                             </a>
-                            <a href="#">
+                            <a href="https://twitter.com/i/flow/login" target="_blank">
                                 <i class="fa-xs fa-brands fa-twitter"></i>
                             </a>
-                            <a href="#">
+                            <a href="https://www.instagram.com/accounts/login/" target="_blank">
                                 <i class="fa-xs fa-brands fa-instagram"></i>
                             </a>
 
@@ -245,7 +245,7 @@
                         
                         <form action="">
                             <div class="input-group">
-                                <input type="text" class=" rounded-pill border border-none ps-2 w-100" placeholder="Search..." aria-label="Search" aria-describedby="button-addon2" required>
+                                <input type="text" class=" rounded-pill border border-none ps-2 w-100" placeholder="Search..." aria-label="Search" aria-describedby="button-addon2">
 
                                 <button class="btn rounded-circle send-button" type="submit" id="button-addon2">
                                     <i class="fa-xs fa-solid fa-magnifying-glass"></i>
@@ -411,6 +411,11 @@
                         font-size: 0.6em;
                     }
                 }
+            }
+
+            li a:hover{
+                color: $color-yellow;
+                text-decoration: underline;
             }
         }
     }

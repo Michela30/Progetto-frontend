@@ -15,11 +15,11 @@ import myButton from './myButton.vue';
                 linkDropdown: [
                     {
                         title: 'Courses',
-                        link: ''
+                        link: '#courses'
                     },
                     {
                         title: 'Events',
-                        link: ''
+                        link: '#event'
                     }
                 ]
 
@@ -31,11 +31,11 @@ import myButton from './myButton.vue';
                 linkDropdown: [
                     {
                         title: 'Law Faculty',
-                        link: ''
+                        link: '#law'
                     },
                     {
                         title: 'Economy',
-                        link: ''
+                        link: '#economy'
                     },
                     {
                         title: 'Medicine',
@@ -133,6 +133,8 @@ import myButton from './myButton.vue';
 <template>
     
     <header>
+        
+        
        <div class="header-top">
 
             <div class="d-flex">
@@ -148,7 +150,7 @@ import myButton from './myButton.vue';
                     <ul class="dropdown">
 
                         <li class="link-nav" v-for="(singleLink, i) in navBarLink" :key="i">
-                            <a id="navbar-a" href="#" :class="{'dropdown-toggle' : singleLink.hasDropdown == true}" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a id="navbar-a" :href="singleLink.link" :class="{'dropdown-toggle' : singleLink.hasDropdown == true}" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 {{singleLink.title}}
                             </a>
 
@@ -157,7 +159,7 @@ import myButton from './myButton.vue';
                                         'd-none': singleLink.hasDropdown == false,}">
 
                                 <li v-for="(singleLinkDropdown, index) in navBarLink[i].linkDropdown" :key="index">
-                                    <a :class="{'dropdown-item' : singleLink.hasDropdown == true}" href="#">
+                                    <a :class="{'dropdown-item' : singleLink.hasDropdown == true}" :href="singleLinkDropdown.link">
                                         {{singleLinkDropdown.title}}
                                     </a>
                                 </li>
@@ -166,9 +168,11 @@ import myButton from './myButton.vue';
                         </li>
 
                         <span class="header-top-button">
-                            <myButton
-                            :title="buttonUno.title"
-                            :color="buttonUno.color"/>
+                            <a href="#courses">
+                                <myButton
+                                :title="buttonUno.title"
+                                :color="buttonUno.color"/>
+                            </a>
                         </span>
                     </ul>
                 </nav>
@@ -228,6 +232,7 @@ import myButton from './myButton.vue';
             </div>
        </div>
 
+  
     </header>
 
 </template>

@@ -5,12 +5,18 @@
     data() {
       return{
         //dati
-       
+       email: [],
+       writeEmail: ''
       }
     },
     methods: {
         //function
-      
+        getEmail(){
+            this.email.push(this.writeEmail)
+            console.log(this.email)
+
+            this.writeEmail = ''
+        }
     },
     components: {
         //dichiarazione
@@ -35,11 +41,11 @@
                 Subscribe Now to Our Newsletter!
             </h4>
 
-            <form action="">
+            <form action="" method="get"  @submit.prevent="getEmail()">
                 <div class="input-group">
-                    <input type="email" class="rounded-pill border border-none ps-2" placeholder="Email address..." aria-label="Email address" aria-describedby="button-addon2" required>
+                    <input v-model="writeEmail" type="email" class="rounded-pill border border-none ps-2" placeholder="Email address..." aria-label="Email address" required>
 
-                    <button class="btn rounded-circle send-button" type="submit" id="button-addon2">
+                    <button class="btn rounded-circle send-button" type="submit">
                         <i class="fa-xs fa-solid fa-paper-plane"></i>
                     </button>
                 </div>

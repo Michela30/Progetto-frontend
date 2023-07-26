@@ -120,7 +120,7 @@ import myButton from './myButton.vue';
 
     <!-- seconda parte della section: events -->
 
-        <div class="events">
+        <div class="events" id="event">
             <div class="text-center">
                 <div class="icon-section">
                     <img src="../assets/img/upcoming-events-calendar-icon.png" alt="">
