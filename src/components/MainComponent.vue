@@ -4,7 +4,7 @@ import FirstSectionMain from './FirstSectionMain.vue'
 import SecondSectionMain from './SecondSectionMain.vue'
 import ThirdSectionMain from './ThirdSectionMain.vue'
 import FourthSectionMain from './FourthSectionMain.vue'
-
+import myButton from './myButton.vue';
 
    export default {
     data() {
@@ -46,7 +46,7 @@ import FourthSectionMain from './FourthSectionMain.vue'
         SecondSectionMain,
         ThirdSectionMain,
         FourthSectionMain,
-
+        myButton
     },
     props:{
         //utilizzo per file padre

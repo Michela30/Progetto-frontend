@@ -96,15 +96,22 @@ import myButton from './myButton.vue';
             }            
         ],
         
-        buttonData: [
-            {
-                title: 'VIEW COURSES',
-                color: 'button-yellow',
-                icon: null,
-                colorHoverWhite: ':hover'
-
-            }
-        ]
+        buttonUno: {
+            title: 'VIEW COURSES',
+            color: 'button-yellow',
+            icon: null,
+        }, 
+        buttonDue: {
+            title: 'Search Courses',
+            color: 'button-yellow',
+            icon: 'fa solid fa-magnifying-glass fa-xs',
+        },
+        buttonTre: {
+            title: 'Apply for university',
+            color: 'button-white',
+            icon: 'fa solid fa-user-plus fa-xs',
+        }
+        
       }
     },
     methods: {
@@ -158,11 +165,11 @@ import myButton from './myButton.vue';
                                     
                         </li>
 
-                        <myButton
-                        v-for="singleButton in buttonData"
-                        :title="singleButton.title"
-                        :color="singleButton.color"
-                        :colorHover="singleButton.colorHoverWhite"/>
+                        <span class="header-top-button">
+                            <myButton
+                            :title="buttonUno.title"
+                            :color="buttonUno.color"/>
+                        </span>
                     </ul>
                 </nav>
             </div>
@@ -186,13 +193,20 @@ import myButton from './myButton.vue';
                     </p>
     
                     <div class="d-flex justify-content-center">
-                        <button>
-                            button comp giallo
-                        </button>
+
+                        <span class="buttonDue">
+                            <myButton
+                            :title="buttonDue.title"
+                            :color="buttonDue.color"
+                            :icon="buttonDue.icon"/>
+                        </span>
     
-                        <button>
-                            button comp white
-                        </button>
+                        <span class="buttonTre">
+                            <myButton
+                            :title="buttonTre.title"
+                            :color="buttonTre.color"
+                            :icon="buttonTre.icon"/>
+                        </span>
                         
                     </div>
                 </div>
@@ -314,14 +328,5 @@ header{
     }
 }
 
-.button-yellow{
-    background-color: $color-yellow;
-    color: white;
-}
-
-// .hovercolor-white{
-//     background-color: white;
-//     color: $color-coral-primary;;
-// }
 
 </style>

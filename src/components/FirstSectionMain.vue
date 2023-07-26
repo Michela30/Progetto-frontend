@@ -1,5 +1,6 @@
 <script>
 //import
+import myButton from './myButton.vue';
 
    export default {
     data() {
@@ -26,7 +27,17 @@
                 image: 'Palette-tabs-v2.png',
                 title: 'Graphic Design'
             }
-        ]
+        ],
+        buttonFour: {
+            title: 'Browse through courses',
+            color: 'button-yellow',
+            icon: null,
+        },
+        buttonFive: {
+            title: 'Read More',
+            color: 'button-coral',
+            icon: null,
+        }
       }
     },
     methods: {
@@ -37,6 +48,7 @@
     },
     components: {
         //dichiarazione
+        myButton
     },
     props:{
         //utilizzo per file padre
@@ -68,9 +80,11 @@
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem similique nulla praesentium debitis velit cumque doloremque culpa eligendi ipsam, asperiores nesciunt! Natus, debitis? Maiores quod cumque voluptates dolorum 
                         </p>
-                        <button class="ms-5">
-                            comp yellow button
-                        </button>
+                        <span class="buttonFour">
+                            <myButton
+                            :title="buttonFour.title"
+                            :color="buttonFour.color"/>
+                        </span>
                         
                     </div>
     
@@ -144,9 +158,11 @@
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam repellendus nesciunt nulla possimus ex quis aliquam pariatur vitae repellat esse itaque cum soluta perspiciatis inventore, deleniti aut. Non recusandae debitis quae quo natus ratione vero.
                     </p>
 
-                    <button>
-                        butt comp coral
-                    </button>
+                    <span class="buttonFive">
+                            <myButton
+                            :title="buttonFive.title"
+                            :color="buttonFive.color"/>
+                        </span>
 
                 </div>
             </div>

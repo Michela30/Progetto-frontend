@@ -1,5 +1,7 @@
 <script>
 //import
+import myButton from './myButton.vue';
+
 
    export default {
     data() {
@@ -30,7 +32,22 @@
                 teacher: 'James Collins',
                 price: 'Free'
             }
-        ]
+        ],
+        buttonEight: {
+            title: 'View Course',
+            color: 'button-coral',
+            icon: 'fa solid fa-eye fa-xs',
+        },
+        buttonNine: {
+            title: 'Discover the Method',
+            color: 'button-coral',
+            icon: null,
+        },
+        buttonTen: {
+            title: 'List of Fees',
+            color: 'button-coral',
+            icon: null,
+        }
       }
     },
     methods: {
@@ -42,6 +59,7 @@
     },
     components: {
         //dichiarazione
+        myButton
     },
     props:{
         //utilizzo per file padre
@@ -97,9 +115,12 @@
                         </small></strong>
                     </div>
 
-                    <button>
-                        view course
-                    </button>
+                    <span class="buttonEight">
+                        <myButton
+                        :title="buttonEight.title"
+                        :color="buttonEight.color"
+                        :icon="buttonEight.icon"/>
+                    </span>
 
                 </div>
             </div>
@@ -119,9 +140,11 @@
                         <p>
                             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit, doloribus aspernatur numquam nobis odit possimus consequuntur quod a tenetur nemo. Quibusdam delectus hic reprehenderit explicabo possimus repudiandae obcaecati nihil nobis.
                         </p>
-                        <button>
-                            comp yellow button
-                        </button>
+                        <div class="buttonNine">
+                            <myButton
+                            :title="buttonNine.title"
+                            :color="buttonNine.color"/>
+                        </div>
                     </div>
                 </div>
 
@@ -155,9 +178,11 @@
                     <p>
                         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit, doloribus aspernatur numquam nobis odit possimus consequuntur quod a tenetur nemo. Quibusdam delectus hic reprehenderit explicabo possimus repudiandae obcaecati nihil nobis.
                     </p>
-                    <button>
-                        comp yellow button
-                    </button>
+                    <div class="buttonNine">
+                        <myButton
+                        :title="buttonTen.title"
+                        :color="buttonTen.color"/>
+                    </div>
                 </div>
                 </div>
             </div>
@@ -184,6 +209,7 @@
         text-align: center;
         height: 200px;
         box-shadow: 0px 2px 13px 6px #F7F8FA;
+        position: relative;
         .icon-box{
             margin-top: 15px;
             width: 50px;

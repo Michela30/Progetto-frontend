@@ -1,5 +1,6 @@
 <script>
 //import
+import myButton from './myButton.vue';
 
    export default {
     data() {
@@ -21,7 +22,17 @@
                 time: '12 Feb 13.30 PM',
                 text: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga nam, fugiat aut quidem laboriosam mollitia.'
             }
-        ]
+        ],
+        buttonSix: {
+            title: 'Find More',
+            color: 'button-coral',
+            icon: 'fa solid fa-plus fa-xs',
+        },
+        buttonSeven: {
+            title: 'View all events',
+            color: 'button-yellow',
+            icon: null,
+        }
       }
     },
     methods: {
@@ -30,6 +41,7 @@
     },
     components: {
         //dichiarazione
+        myButton
     },
     props:{
         //utilizzo per file padre
@@ -134,16 +146,21 @@
                             {{ singleCard.text }}
                         </p>
 
-                        <button>
-                            + find more
-                        </button>
+                        <div class="buttonSix">
+                            <myButton
+                            :title="buttonSix.title"
+                            :color="buttonSix.color"
+                            :icon="buttonSix.icon"/>
+                        </div>
                     </div>
                     
                 </div>
 
-                <button class="mt-5">
-                    view all events
-                </button>
+                <div class="buttonSeven">
+                    <myButton
+                    :title="buttonSeven.title"
+                    :color="buttonSeven.color"/>
+                </div>
             </div>
         </div>
 
@@ -237,6 +254,7 @@
             background-color: white;
             color: black;
             padding: 25px 10px;
+            position: relative;
             
             p{
                 font-size: 0.7em;
