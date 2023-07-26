@@ -104,7 +104,7 @@ import myButton from './myButton.vue';
 
         <div class="sfondo-dx">
 
-            <div class="my_container">
+            <div class="my_container" id="first-course">
                 
                 <div class="row">
                     <div class="col-8">
@@ -141,7 +141,7 @@ import myButton from './myButton.vue';
         </div>
 
 
-        <div class="my-small-container text-center">
+        <div class="my-small-container text-center" id="faculties">
             <h2>
                 Faculties available at EduPrime
             </h2>

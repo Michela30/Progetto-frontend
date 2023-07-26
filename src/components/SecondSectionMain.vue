@@ -10,17 +10,17 @@ import myButton from './myButton.vue';
             {
                 title: 'Coaching Session',
                 time: '20 May 21.30 PM',
-                text: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga nam, fugiat aut quidem laboriosam mollitia.'
+                text: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga nam, fugiat aut quidem laboriosam mollitia.',
             },
             {
                 title: 'Coaching Session',
                 time: '24 Mar 18:00 PM',
-                text: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga nam, fugiat aut quidem laboriosam mollitia.'
+                text: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga nam, fugiat aut quidem laboriosam mollitia.',
             },
             {
                 title: 'Coaching Session',
                 time: '12 Feb 13.30 PM',
-                text: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga nam, fugiat aut quidem laboriosam mollitia.'
+                text: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga nam, fugiat aut quidem laboriosam mollitia.',
             }
         ],
         buttonSix: {
@@ -58,7 +58,7 @@ import myButton from './myButton.vue';
 
     <!-- prima parte della section: university-->
 
-        <div class="uni-section">
+        <div class="uni-section" id="university">
             
             <div class="text-center">
 
@@ -131,6 +131,7 @@ import myButton from './myButton.vue';
                 </h2>
 
                 <div class="row justify-content-center">
+                    
                     <div class="my_card" v-for="(singleCard, i) in events" :key="i">
                         <h5>
                             {{ singleCard.title }}
@@ -208,10 +209,10 @@ import myButton from './myButton.vue';
                 }
             }
             .firstpar{
-                margin-left: 430px;
+                margin-left: 450px;
             }
             .secondpar{
-                margin-right: 230px;
+                margin-right: 240px;
             }
         }
 
@@ -226,10 +227,10 @@ import myButton from './myButton.vue';
                 }
             }
             .thirdpar{
-                margin-left: 250px;
+                margin-left: 260px;
             }
             .fourthpar{
-                margin-right: 420px;
+                margin-right: 440px;
             }
         }
 

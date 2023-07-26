@@ -97,31 +97,31 @@
         linkFooterRight: [
             {
                 title: 'economy',
-                link: ''
+                link: '#faculties'
             },
             {
                 title: 'design',
-                link: ''
+                link: '#faculties'
             },
             {
                 title: 'coaching',
-                link: ''
+                link: '#faculties'
             },
             {
                 title: 'business',
-                link: ''
+                link: '#faculties'
             },
             {
                 title: 'medicine',
-                link: ''
+                link: '#faculties'
             },
             {
                 title: 'law',
-                link: ''
+                link: '#faculties'
             },
             {
                 title: 'fitness',
-                link: ''
+                link: '#faculties'
             }
         ]
       }
@@ -152,7 +152,7 @@
                 </h2>
                 
                 <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non qui nesciunt eum voluptate? Corporis, in nulla!
+                    Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy.
                 </p>
             </div>
             
@@ -188,7 +188,7 @@
                         </div>
 
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. A, doloribus cumque? Sunt, dolor numquam!
+                            EduPrime is the most versatile Wordpress theme for educational purposes, showcasing universities, courses, secondary schools etc
                         </p>
 
                         <div class="social">
@@ -261,7 +261,7 @@
                             </div>
 
                             <div class="categories" v-for="singleLinkFooter in linkFooterRight">
-                                <a href="#">
+                                <a :href="singleLinkFooter.link">
                                     {{singleLinkFooter.title}}
                                 </a>
                             </div>

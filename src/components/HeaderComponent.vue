@@ -30,12 +30,16 @@ import myButton from './myButton.vue';
                 hasDropdown: true,
                 linkDropdown: [
                     {
+                        title: 'All the Faculties',
+                        link: '#faculties'
+                    },
+                    {
                         title: 'Law Faculty',
-                        link: '#law'
+                        link: ''
                     },
                     {
                         title: 'Economy',
-                        link: '#economy'
+                        link: ''
                     },
                     {
                         title: 'Medicine',
@@ -76,11 +80,11 @@ import myButton from './myButton.vue';
                 linkDropdown: [
                     {
                         title: 'Courses',
-                        link: ''
+                        link: '#first-course'
                     },
                     {
-                        title: 'Events',
-                        link: ''
+                        title: 'University Year',
+                        link: '#university'
                     }
                 ]
             },
@@ -193,7 +197,7 @@ import myButton from './myButton.vue';
                     </h1>
     
                     <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus autem fuga mollitia ullam consequuntur.
+                        EduPrime is the most versatile Wordpress theme for educational purposes, showcasing universities, courses, secondary schools etc
                     </p>
     
                     <div class="d-flex justify-content-center">
