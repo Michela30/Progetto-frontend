@@ -8,35 +8,35 @@
         partners: [
             {
                 name: 'paperplane',
-                image: 'partner-1.png'
+                image: 'img/partner-1.png'
             },
             {
                 name: 'medals',
-                image: 'partner-2.png'
+                image: 'img/partner-2.png'
             },
             {
                 name: '',
-                image: 'partner-3.png'
+                image: 'img/partner-3.png'
             },
             {
                 name: '',
-                image: 'partner-4.png'
+                image: 'img/partner-4.png'
             },
             {
                 name: 'school building',
-                image: 'partner-5.png'
+                image: 'img/partner-5.png'
             },
             {
                 name: 'handmade',
-                image: 'partner-6.png'
+                image: 'img/partner-6.png'
             },
             {
                 name: 'abc comunication',
-                image: 'partner-7.png'
+                image: 'img/partner-7.png'
             },
             {
                 name: '',
-                image: 'partner-8.png'
+                image: 'img/partner-8.png'
             },
         ],
 
@@ -161,7 +161,7 @@
                 <div class="partner-box" v-for="(singlePartner, i) in partners" :key="i">
                     
                     <div class="img-box">
-                        <img :src="getImagePath(`../assets/img/${singlePartner.image}`)" alt="">
+                        <img :src="singlePartner.image" alt="">
                     </div>
                     
                     

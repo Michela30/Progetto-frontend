@@ -9,25 +9,25 @@ import myButton from './myButton.vue';
         //dati
         latestCourses: [
             {
-                image: 'Decisions-icon.png',
+                image: 'img/Decisions-icon.png',
                 title: 'Make Better Decisions',
                 teacher: 'James Collins',
                 price: '$21.00'
             },
             {
-                image: 'Speaker-icon.png',
+                image: 'img/Speaker-icon.png',
                 title: 'How to be a speaker',
                 teacher: 'James Collins',
                 price: 'Free'
             },
             {
-                image: 'Network-icon.png',
+                image: 'img/Network-icon.png',
                 title: 'Network Introductions',
                 teacher: 'James Collins',
                 price: 'Free'
             },
             {
-                image: 'Brand-icon.png',
+                image: 'img/Brand-icon.png',
                 title: 'Brand Management',
                 teacher: 'James Collins',
                 price: 'Free'
@@ -89,7 +89,7 @@ import myButton from './myButton.vue';
 
                 <div class="col" v-for="(singleCourse, i) in latestCourses" :key="i">
                     <div class="icon-box">
-                        <img :src="getImagePath(`../assets/img/${singleCourse.image}`)">
+                        <img :src="singleCourse.image">
                     </div>
                     <h6 class="title">
                         {{singleCourse.title}}
