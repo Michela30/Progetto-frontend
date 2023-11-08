@@ -161,7 +161,7 @@ import myButton from './myButton.vue';
 
                     <div class="col" v-for="(iconFaculties, index) in faculties" :key="index" @click="nextTab(index)">
                         <div class="iconFaculties-box">
-                            <img :src="getImagePath(`../assets/img/${iconFaculties.image}`)">
+                            <img :src="iconFaculties.image">
                         </div>
                         <strong>
                             {{iconFaculties.title}}
@@ -184,7 +184,7 @@ import myButton from './myButton.vue';
                 <div class="col-5">
 
                     <div class="faculty-img">
-                        <img :src="getImagePath(`../assets/img/${singleTab.image}`)" alt="">
+                        <img :src="singleTab.image" alt="">
                     </div>
 
                 </div>
