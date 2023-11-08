@@ -9,54 +9,54 @@ import myButton from './myButton.vue';
         count: 0,
         faculties: [
             {
-                image: 'Gavel-v2.png',
+                image: 'img/Gavel-v2.png',
                 link: '',
                 title: 'Law Faculty'
             },
             {
-                image: 'Coins-tabs-v2.png',
+                image: 'img/Coins-tabs-v2.png',
                 link: '',
                 title: 'Economy'
             },
             {
-                image: 'Medicine-tabs-v2.png',
+                image: 'img/Medicine-tabs-v2.png',
                 link: '',
                 title: 'Medicine'
             },
             {
-                image: 'Computer-tabs-v2.png',
+                image: 'img/Computer-tabs-v2.png',
                 link: '',
                 title: 'Computer Science'
             },
             {
-                image: 'Palette-tabs-v2.png',
+                image: 'img/Palette-tabs-v2.png',
                 link: '',
                 title: 'Graphic Design'
             }
         ],
         facultiesDescription: [
             {
-                image: 'Gavel-Illustration-e1556884768193.png',
+                image: 'img/Gavel-Illustration-e1556884768193.png',
                 title: 'Law Faculty',
                 text: '   Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium deserunt voluptatibus obcaecati harum voluptatum. Ipsam nisi molestiae ab impedit, suscipit libero dolor totam optio pariatur aut, quibusdam assumenda atque tempore natus porro unde illum laborum quisquam dignissimos deserunt. Quisquam, maiores!'
             },
             {
-                image: 'Economy.png',
+                image: 'img/Economy.png',
                 title: 'Economy',
                 text: '   Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium deserunt voluptatibus obcaecati harum voluptatum. Ipsam nisi molestiae ab impedit, suscipit libero dolor totam optio pariatur aut, quibusdam assumenda atque tempore natus porro unde illum laborum quisquam dignissimos deserunt. Quisquam, maiores!'
             },
             {
-                image: 'Medicine.png',
+                image: 'img/Medicine.png',
                 title: 'Medicine',
                 text: '   Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium deserunt voluptatibus obcaecati harum voluptatum. Ipsam nisi molestiae ab impedit, suscipit libero dolor totam optio pariatur aut, quibusdam assumenda atque tempore natus porro unde illum laborum quisquam dignissimos deserunt. Quisquam, maiores!'
             },
             {
-                image: 'Computer-Science.png',
+                image: 'img/Computer-Science.png',
                 title: 'Computer Science',
                 text: '   Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium deserunt voluptatibus obcaecati harum voluptatum. Ipsam nisi molestiae ab impedit, suscipit libero dolor totam optio pariatur aut, quibusdam assumenda atque tempore natus porro unde illum laborum quisquam dignissimos deserunt. Quisquam, maiores!'
             },
             {
-                image: 'Graphic-Design.png',
+                image: 'img/Graphic-Design.png',
                 title: 'Graphic Design',
                 text: '   Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium deserunt voluptatibus obcaecati harum voluptatum. Ipsam nisi molestiae ab impedit, suscipit libero dolor totam optio pariatur aut, quibusdam assumenda atque tempore natus porro unde illum laborum quisquam dignissimos deserunt. Quisquam, maiores!'
             }
